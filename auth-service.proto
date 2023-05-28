@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package auth;
+
+service auth {
+    rpc SignUp(SignUpModel) returns (Empty) {}
+    rpc Login(LoginModel) returns (Empty) {}
+}
+
+message SignUpModel {
+    string id = 1;
+    string name = 2;
+    int32 age = 3;
+    string email = 4;
+    string password = 5;
+}
+
+message LoginModel {
+    string email = 1;
+    string password = 2;
+}
+
+message Empty {}
