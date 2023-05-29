@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/i-akbarshoh";
+option go_package = "github.com/i-akbarshoh/proto";
 
 package auth;
 
@@ -15,6 +15,7 @@ message SignUpModel {
     int32 age = 3;
     string email = 4;
     string password = 5;
+    string role = 6;
 }
 
 message LoginModel {
